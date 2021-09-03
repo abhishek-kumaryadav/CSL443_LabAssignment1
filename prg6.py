@@ -26,13 +26,12 @@ def egcd(a, b):
 def main():
     a, n = [int(i) for i in sys.argv[1:]]
     gccd, x, y = egcd(a, n)
-    print("a*{} + n*{} = {} = gcd({},{})".format(x, y, gccd, a, n))
+    # print("a*{} + n*{} = {} = gcd({},{})".format(x, y, gccd, a, n))
     if gccd > 1:
         print("N")
         # print("Multiplicative inverse of {}(mod {}) doesn't exist".format(a, n))
     else:
-        print("Y")
-        print((x % n + n) % n)
+        print("Y {}".format((x % n + n) % n))
 
 
 if __name__ == "__main__":

@@ -115,7 +115,9 @@ def findPrimitive(n):
 
 def main():
     m = [int(i) for i in sys.argv[1:]][0]
-    print(" ".join([str(i) for i in sorted(findPrimitive(m))]))
+    retval = sorted(findPrimitive(m))
+    retval.insert(0, len(retval))
+    print(" ".join([str(i) for i in retval]))
 
 
 if __name__ == "__main__":

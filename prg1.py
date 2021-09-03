@@ -45,7 +45,7 @@ def find_divisors(arr):
 def main():
     arr = [int(i) for i in sys.argv[2:]]
     divisors = find_divisors(arr)
-    print(" ".join(str(x) for x in divisors))
+    print(" ".join(str(x) for x in sorted(divisors)))
 
 
 if __name__ == "__main__":

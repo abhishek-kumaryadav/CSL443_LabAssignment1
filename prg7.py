@@ -42,12 +42,15 @@ def linearCongruence(A, B, N):
     x0 = (x * (B // gccd)) % N
     if x0 < 0:
         x0 += N
-
+    retval = [str((x0 + i * (N // gccd)) % N) for i in range(gccd)]
+    retval.insert(0, str(len(retval)))
+    retval.insert(0, "Y")
+    print(" ".join(retval))
     # Number of solutions
-    print(gccd)
+    # print(gccd)
     # All the solutions
-    for i in range(gccd):
-        print((x0 + i * (N // gccd)) % N, end=" ")
+    # for i in range(gccd):
+    # print((x0 + i * (N // gccd)) % N, end=" ")
 
 
 def main():

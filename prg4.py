@@ -51,8 +51,10 @@ def main():
         for i in range(2, n):
             if not (shareCommonDivisor(i, n)):
                 rrsm.add(i)
-        print(" ".join(str(i) for i in sorted(rrsm)))
-        print("φ({})={}".format(n, len(rrsm)))
+        retval = sorted(rrsm)
+        retval.append(len(rrsm))
+        print(" ".join(str(i) for i in retval))
+        # print("φ({})={}".format(n, len(rrsm)))
 
 
 if __name__ == "__main__":
