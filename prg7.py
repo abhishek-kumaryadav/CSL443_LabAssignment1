@@ -1,18 +1,4 @@
 import sys
-from sys import stdout
-
-int_r = lambda: int(sys.stdin.readline())
-str_r = lambda: sys.stdin.readline().strip()
-intList_r = lambda: list(map(int, sys.stdin.readline().strip().split()))
-strList_r = lambda: list(sys.stdin.readline().strip())
-jn = lambda x, l: x.join(map(str, l))
-mul = lambda: map(int, sys.stdin.readline().strip().split())
-mulf = lambda: map(float, sys.stdin.readline().strip().split())
-ceil = lambda x: int(x) if (x == int(x)) else int(x) + 1
-ceildiv = lambda x, d: x // d if (x % d == 0) else x // d + 1
-flush = lambda: stdout.flush()
-outStr = lambda x: stdout.write(str(x))
-mod = 1000000007
 
 
 def egcd(a, b):
@@ -35,7 +21,7 @@ def linearCongruence(A, B, N):
 
     # No solution
     if B % gccd != 0:
-        print("N")
+        print("N", end="")
         return
 
     # Else, initialize the value of x0
@@ -45,7 +31,7 @@ def linearCongruence(A, B, N):
     retval = [str((x0 + i * (N // gccd)) % N) for i in range(gccd)]
     retval.insert(0, str(len(retval)))
     retval.insert(0, "Y")
-    print(" ".join(retval))
+    print(" ".join(retval), end="")
     # Number of solutions
     # print(gccd)
     # All the solutions

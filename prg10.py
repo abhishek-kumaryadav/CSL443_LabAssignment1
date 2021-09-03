@@ -1,19 +1,5 @@
 import sys
 import math
-from sys import stdout
-
-int_r = lambda: int(sys.stdin.readline())
-str_r = lambda: sys.stdin.readline().strip()
-intList_r = lambda: list(map(int, sys.stdin.readline().strip().split()))
-strList_r = lambda: list(sys.stdin.readline().strip())
-jn = lambda x, l: x.join(map(str, l))
-mul = lambda: map(int, sys.stdin.readline().strip().split())
-mulf = lambda: map(float, sys.stdin.readline().strip().split())
-ceil = lambda x: int(x) if (x == int(x)) else int(x) + 1
-ceildiv = lambda x, d: x // d if (x % d == 0) else x // d + 1
-flush = lambda: stdout.flush()
-outStr = lambda x: stdout.write(str(x))
-mod = 1000000007
 
 
 def isPrime(n):
@@ -117,7 +103,7 @@ def main():
     m = [int(i) for i in sys.argv[1:]][0]
     retval = sorted(findPrimitive(m))
     retval.insert(0, len(retval))
-    print(" ".join([str(i) for i in retval]))
+    print(" ".join([str(i) for i in retval]), end="")
 
 
 if __name__ == "__main__":
